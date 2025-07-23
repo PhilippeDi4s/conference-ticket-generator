@@ -1,0 +1,64 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: local("Inconsolata"),
+    url("/assets/fonts/static/Inconsolata-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/fonts/static/Inconsolata-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/fonts/static/Inconsolata-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/assets/fonts/static/Inconsolata-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+:root {
+  --branco: hsl(0, 0%, 100%);
+  --cinza-claro: hsl(252, 6%, 83%);
+  --cinza: hsl(245, 15%, 58%);
+  --cinza-escuro: hsl(245, 19%, 35%);
+  --azul-escuro: hsl(248, 70%, 10%);
+}
+
+body {
+  font-family: "Inconsolata";
+  color: var(--branco);
+  background-color: black;
+  background-image: url(assets/images/pattern-lines.svg),
+    url(assets/images/pattern-circle.svg),
+    url(assets/images/pattern-squiggly-line-top.svg),
+    url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),
+    url(assets/images/background-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 170vh, 6rem, 6rem, 15rem, cover;
+  background-position: top, -5vw -3vh, top right, bottom left, bottom;
+  background-attachment: fixed;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
