@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Conference ticket generator</title>
+  </head>
+  <body>
+    <header class="mainHeader">
+      <a href="form.html"
+        ><img src="assets/images/logo-full.svg" alt="Logo"
+      /></a>
+    </header>
+
+    <section class="hero">
+      <h1 class="hero__title">
+        Congrats,
+        <span class="user__name" id="user__name"></span> Your
+        tickect is ready.
+      </h1>
+      <p class="hero__subtitle">
+        We've emailed your tickect to
+        <span class="user__email" id="user__email"></span>
+        and will send updates in the run up to the event
+      </p>
+    </section>
+
+    <section class="tickectSection">
+      <article class="ticket">
+        <div class="ticket__date">
+          <img
+            src="assets/images/logo-mark.svg"
+            alt="Logo mark"
+            class="ticket__date-image"
+          />
+          <div class="ticket__date-information">
+            <h2 class="ticket__date-title">Coding Conf</h2>
+            <p class="ticket__date-text">Jan 31, 2025 / Austin, TX</p>
+          </div>
+        </div>
+        <div class="ticket__user">
+          <img src="" alt="" id="imageDisplay" class="tickect__user-image" />
+          <div class="ticket__user-information">
+            <h3 class="ticket__user-name" id="ticket__user-name"></h3>
+            <p class="ticket__user-git" id="ticket__user-git"></p>
+          </div>
+        </div>
+        <span class="tickect__code">#1234560</span>
+      </article>
+    </section>
+    <script src="tickect.js"></script>
+  </body>
+</html>

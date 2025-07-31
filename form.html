@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Conference ticket generator</title>
+  </head>
+  <body>
+    <header class="mainHeader">
+      <a href="#home"><img src="assets/images/logo-full.svg" alt="Logo" /></a>
+    </header>
+
+    <section class="hero">
+      <h1 class="hero__title">Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p class="hero__subtitle">
+        Secure your spot at next year's biggest coding conference.
+      </p>
+    </section>
+
+    <form class="registrationForm">
+      <div class="form__uploadContainer">
+        <p>Upload Avatar</p>
+        <input type="file" id="avatar" accept=".png, .jpg" />
+        <label for="avatar" class="uploadAvatar__box">
+          <img
+            src="assets/images/icon-upload.svg"
+            alt=""
+            class="upload__icon"
+            id="upload__icon"
+          />
+          <img
+          src=""
+            alt=""
+            class="uploadPreview__avatar"
+            id="uploadPreview__avatar"
+          />
+          <span class="upload__text" id="upload__text">Drag and drop or click to upload</span>
+        </label>
+        <div class="uploadPreview__buttons" id="preview_buttons">
+            <button id="delete_avatar" type="button">Remove image</button>
+            <button id="change_avatar" type="button">Change image</button>
+          </div>
+        <span class="file-note"
+          ><img
+            src="assets/images/icon-info.svg"
+            alt=""
+            class="file-note__icon"
+          />
+          Upload your photo (JPG or PNG, max size: 500KB).</span
+        >
+        <span class="file-note error" id="error--upload"
+          ><svg
+            class="file-note__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="none"
+            viewBox="0 0 16 16"
+          >
+            <path
+              stroke="#ce5050"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+            />
+            <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+            <path
+              stroke="#ce5050"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.004 10.462V7.596M8 5.569v-.042"
+            />
+          </svg>
+
+          This value can't be null.</span
+        >
+        <span class="file-note error" id="error--size"
+          ><svg
+            class="file-note__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="none"
+            viewBox="0 0 16 16"
+          >
+            <path
+              stroke="#ce5050"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+            />
+            <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+            <path
+              stroke="#ce5050"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.004 10.462V7.596M8 5.569v-.042"
+            />
+          </svg>
+
+          File to large. Please upload a photo under 500KB</span
+        >
+      </div>
+      <label for="name">Full name</label>
+      <input type="text" id="name" />
+      <span class="file-note error" id="error--name"
+        ><svg
+          class="file-note__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="none"
+          viewBox="0 0 16 16"
+        >
+          <path
+            stroke="#ce5050"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+          />
+          <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+          <path
+            stroke="#ce5050"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.004 10.462V7.596M8 5.569v-.042"
+          />
+        </svg>
+
+        This value can't be null.</span
+      >
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="example@email.com" />
+      <span class="file-note error" id="error--email"
+        ><svg
+          class="file-note__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="none"
+          viewBox="0 0 16 16"
+        >
+          <path
+            stroke="#ce5050"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+          />
+          <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+          <path
+            stroke="#ce5050"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.004 10.462V7.596M8 5.569v-.042"
+          />
+        </svg>
+
+        Please entry a valid email address.</span
+      >
+
+      <label for="nameGit">GitHub Username</label>
+      <input type="text" id="nameGit" placeholder="@yourUserName" />
+      <span class="file-note error" id="error--nameGit"
+        ><svg
+          class="file-note__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="none"
+          viewBox="0 0 16 16"
+        >
+          <path
+            stroke="#ce5050"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+          />
+          <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+          <path
+            stroke="#ce5050"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.004 10.462V7.596M8 5.569v-.042"
+          />
+        </svg>
+
+        This value can't be null.</span
+      >
+
+      <input type="submit" value="Generate My Ticket" class="form__btn" />
+    </form>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Philippe</a>.
+    </div>
+
+    <script src="form.js"></script>
+  </body>
+</html>

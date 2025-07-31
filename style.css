@@ -38,21 +38,24 @@
   --cinza: hsl(245, 15%, 58%);
   --cinza-escuro: hsl(245, 19%, 35%);
   --azul-escuro: hsl(248, 70%, 10%);
+
+  --default-padding: 1rem;
 }
 
 body {
   font-family: "Inconsolata";
   color: var(--branco);
-  background-color: black;
   background-image: url(assets/images/pattern-lines.svg),
     url(assets/images/pattern-circle.svg),
     url(assets/images/pattern-squiggly-line-top.svg),
     url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),
     url(assets/images/background-mobile.png);
   background-repeat: no-repeat;
-  background-size: 170vh, 6rem, 6rem, 15rem, cover;
+  background-size: 170vh, 6rem, 6rem, 13rem, cover;
   background-position: top, -5vw -3vh, top right, bottom left, bottom;
   background-attachment: fixed;
+  display: grid;
+  place-items: center;
 }
 
 .attribution {
@@ -61,4 +64,288 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.mainHeader {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.hero {
+  text-align: center;
+  padding: var(--default-padding);
+  max-width: 36rem;
+}
+
+.hero__title {
+  font-weight: 800;
+  font-size: clamp(1.5rem, 7vw, 2.5rem);
+}
+
+.hero__subtitle {
+  margin-top: 1.3rem;
+  color: var(--cinza-claro);
+  line-height: 1.4rem;
+  font-size: clamp(0.8rem, 5vw, 1.2rem);
+}
+
+.registrationForm {
+  width: 100%;
+  max-width: 35rem;
+  padding: 0 var(--default-padding);
+  display: flex;
+  flex-direction: column;
+}
+
+.registrationForm label,
+p {
+  color: var(--cinza-claro);
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  width: fit-content;
+}
+
+.registrationForm input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.form__uploadContainer {
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.uploadAvatar__box {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(1rem, 5vw, 3rem);
+  width: 100%;
+  border: 3px dashed var(--cinza-escuro);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.128);
+  max-width: 40rem;
+  cursor: pointer;
+}
+
+.upload__icon {
+  width: 3.6rem;
+  background-color: rgba(255, 255, 255, 0.128);
+  border-radius: 12px;
+  padding: 0.5rem;
+  border: 0.5px solid var(--cinza-escuro);
+}
+
+.upload__text {
+  font-size: clamp(0.8rem, 3.5vw, 1rem);
+  text-align: center;
+}
+
+.uploadPreview__avatar {
+  width: 3.6rem;
+  border-radius: 12px;
+  border: 0.5px solid var(--cinza);
+  display: none;
+}
+
+.uploadPreview__buttons {
+  position: absolute;
+  top: 72%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: 100%;
+  display: none;
+}
+
+.uploadPreview__buttons button {
+  background-color: rgba(255, 255, 255, 0.184);
+  color: var(--cinza-claro);
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.uploadPreview__buttons #delete_avatar {
+  text-decoration: underline;
+}
+
+.file-note {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.file-note__icon {
+  margin-right: 0.5rem;
+}
+
+.error {
+  color: #a84c4c;
+  display: none;
+}
+
+.registrationForm input {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--cinza-claro);
+  color: var(--cinza-claro);
+  max-width: 40rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.registrationForm input:focus,
+#avatar:focus + label, .uploadPreview__buttons button:focus {
+  outline: 1.5px solid var(--cinza-claro);
+  outline-offset: 0.15rem;
+}
+
+.registrationForm input:hover,
+#avatar:hover + label, .uploadPreview__buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.222);
+}
+
+.registrationForm input::placeholder {
+  color: var(--cinza-claro);
+}
+
+.registrationForm .form__btn {
+  background-color: hsl(7, 88%, 67%);
+  color: var(--azul-escuro);
+  border-color: var(--azul-escuro);
+  transition: background-color 0.3s ease-in-out;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+.registrationForm .form__btn:hover {
+  background-color: hsl(7, 71%, 60%);
+}
+
+.user__name {
+  background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.user__email {
+  color: hsl(7, 88%, 67%);
+}
+
+.tickectSection {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.ticket {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(assets/images/pattern-ticket.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  border-left: 1px solid white;
+  border-radius: 4px;
+  gap: clamp(0.5rem, 10vw, 4rem);
+}
+
+.ticket__date,
+.ticket__user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  width: clamp(15rem, 80vw, 30rem);
+  margin-left: 1rem;
+  padding-right: 6rem;
+}
+
+.ticket__date p,
+.ticket__user p {
+  margin-top: 0;
+}
+
+.ticket__date {
+  margin-top: clamp(0.5rem, 7vw, 2rem);
+}
+
+.ticket__user {
+  margin-bottom: clamp(0.5rem, 7vw, 2rem);
+}
+
+.ticket__user-information p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ticket__date-image {
+  width: 25%;
+  max-width: 3rem;
+  border-radius: 8px;
+}
+
+.ticket__date-title,
+.ticket__user-name {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.tickect__user-image {
+  width: 25%;
+  max-width: 3.5rem;
+  min-width: 3rem;
+  border-radius: 8px;
+}
+
+.ticket__date-text,
+.ticket__user-git {
+  font-size: clamp(0.7rem, 3vw, 1rem);
+  color: var(--cinza);
+}
+
+.tickect__code {
+  position: absolute;
+  right: 1.5rem;
+  transform: perspective(500px) rotate(90deg) translateX(50%);
+  transform-origin: center right;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--cinza);
+}
+
+@media screen and (min-width: 54rem) {
+  body {
+    background-image: url(assets/images/pattern-lines.svg),
+      url(assets/images/pattern-circle.svg),
+      url(assets/images/pattern-squiggly-line-top.svg),
+      url(assets/images/pattern-squiggly-line-bottom-desktop.svg),
+      url(assets/images/background-desktop.png);
+    background-repeat: repeat-x, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: contain, 6rem, 20rem, 30rem, cover;
+    background-position: top left, -5vw -3vh, right 10vh, bottom left, bottom;
+  }
 }
