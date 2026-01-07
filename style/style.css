@@ -9,25 +9,25 @@
 @font-face {
   font-family: "Inconsolata";
   src: local("Inconsolata"),
-    url("/assets/fonts/static/Inconsolata-Regular.ttf") format("truetype");
+    url("../assets/fonts/static/Inconsolata-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Inconsolata";
-  src: url("/assets/fonts/static/Inconsolata-Medium.ttf") format("truetype");
+  src: url("../assets/fonts/static/Inconsolata-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Inconsolata";
-  src: url("/assets/fonts/static/Inconsolata-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/static/Inconsolata-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Inconsolata";
-  src: url("/assets/fonts/static/Inconsolata-ExtraBold.ttf") format("truetype");
+  src: url("../assets/fonts/static/Inconsolata-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
@@ -45,11 +45,11 @@
 body {
   font-family: "Inconsolata";
   color: var(--branco);
-  background-image: url(assets/images/pattern-lines.svg),
-    url(assets/images/pattern-circle.svg),
-    url(assets/images/pattern-squiggly-line-top.svg),
-    url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),
-    url(assets/images/background-mobile.png);
+  background-image: url(..assets/images/pattern-lines.svg),
+    url(..assets/images/pattern-circle.svg),
+    url(..assets/images/pattern-squiggly-line-top.svg),
+    url(..assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),
+    url(..assets/images/background-mobile.png);
   background-repeat: no-repeat;
   background-size: 170vh, 6rem, 6rem, 13rem, cover;
   background-position: top, -5vw -3vh, top right, bottom left, bottom;
@@ -262,7 +262,7 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-image: url(assets/images/pattern-ticket.svg);
+  background-image: url(..assets/images/pattern-ticket.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -339,11 +339,11 @@ p {
 
 @media screen and (min-width: 54rem) {
   body {
-    background-image: url(assets/images/pattern-lines.svg),
-      url(assets/images/pattern-circle.svg),
-      url(assets/images/pattern-squiggly-line-top.svg),
-      url(assets/images/pattern-squiggly-line-bottom-desktop.svg),
-      url(assets/images/background-desktop.png);
+    background-image: url(..assets/images/pattern-lines.svg),
+      url(..assets/images/pattern-circle.svg),
+      url(..assets/images/pattern-squiggly-line-top.svg),
+      url(..assets/images/pattern-squiggly-line-bottom-desktop.svg),
+      url(..assets/images/background-desktop.png);
     background-repeat: repeat-x, no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: contain, 6rem, 20rem, 30rem, cover;
     background-position: top left, -5vw -3vh, right 10vh, bottom left, bottom;
